@@ -89,9 +89,9 @@ const App = () => {
     setWrongWords([]);
   };
 
-  const calculateTypingSpeed = () => {
+  const calculateTypingSpeed = (real) => {
     const wordsTyped = currWordIndex;
-    const timeInSeconds = SECONDS - countDownReal;
+    const timeInSeconds = (real ? SECONDS - countDownReal : SECONDS - countDown);
     const typingSpeed = Math.round((wordsTyped / timeInSeconds) * 60);
     return typingSpeed;
   };
@@ -142,13 +142,14 @@ const App = () => {
               ref={textInput}
             />
             <p>Words typed: {currWordIndex}</p>
+            <p>Typing speed: {calculateTypingSpeed(false)}</p>
             <p>Characters typed: {currCharIndex}</p>
           </div>
         )}
         {status === 'finished' && (
           <div>
             <p>Game finished!</p>
-            <p>Typing speed: {calculateTypingSpeed()} words per minute</p>
+            <p>Typing speed: {calculateTypingSpeed(true)} words per minute</p>
             <p>Accuracy: {calculateAccuracy()}%</p>
             <p>Wrong words typed: {wrongWords.length}</p>
             <p>Wrong words: {wrongWords.join(', ')}</p>
