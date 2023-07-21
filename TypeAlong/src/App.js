@@ -18,7 +18,7 @@ const App = () => {
   useEffect(() => {
     const fetchWords = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/get_words');
+        const response = await axios.get('http://localhost:4000/get_couples');
         setWords(response.data.slice(0, NUMB_OF_WORDS));
       } catch (error) {
         console.error('Error fetching words:', error);
