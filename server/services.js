@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 exports.get_couples = async (num) => {
     const api_path = "https://random-word-api.herokuapp.com/word?length=2&number=" + num;
     const response = await fetch(api_path);
@@ -18,7 +21,7 @@ exports.get_quotes = (num) => {
         request.get({
             url: 'https://api.api-ninjas.com/v1/quotes?limit=' + num,
             headers: {
-                'X-Api-Key': 'xqN2IiLXwzEDYsK1ht8OCQ==E4nr60HV1ZkC8SgS'
+                'X-Api-Key': process.env.XAPIKEY
             },
         }, (err, resp, body) => {
             if (err) {
