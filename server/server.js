@@ -25,6 +25,8 @@ app.get('/get_quotes', async (req, res) => {
     res.send(response);
 })
 
-app.listen(4000, () => {
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
     console.log('listening on port 4000')
 });
