@@ -23,7 +23,7 @@ const Page = (props) => {
   useEffect(() => {
     const fetchWords = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/' + (df === "easy" ? "get_couples" : (df === "medium" ? "get_words" : "get_quotes")));
+        const response = await axios.get('https://typeswift-backend.onrender.com/' + (df === "easy" ? "get_couples" : (df === "medium" ? "get_words" : "get_quotes")));
         if (df === "hard") {
           const quotes = [];
           (response.data).forEach((quote) => {
