@@ -152,7 +152,7 @@ const Page = (props) => {
 
   return (
     <div className={"w-full h-screen flex flex-col space-y-5 justify-center items-center md:p-20 sm:p-10 p-5 " + (df === "easy" ? "bg-green-300" : (df === "medium" ? "bg-amber-300" : "bg-red-300"))}>
-      <h1 class={"font-extrabold text-3xl w-full max-w-3xl text-center bg-amber-300 p-5 -mb-4 rounded-lg rounded-b-none text-white drop-shadow-xl " + (df === "easy" ? "bg-green-300" : (df === "medium" ? "bg-amber-300" : "bg-red-300"))}>{status === "finished" ? "Game Over ;)" : "--- Test Type ---"}</h1>
+      <h1 class={"font-extrabold text-3xl w-full max-w-3xl text-center bg-amber-300 p-5 -mb-4 rounded-lg rounded-b-none text-white drop-shadow-xl " + (df === "easy" ? "bg-green-300" : (df === "medium" ? "bg-amber-300" : "bg-red-300"))}>{status === "finished" ? "Game Over ;)" : "--- Type Swift ---"}</h1>
       <div className="drop-shadow-xl rounded-lg rounded-t-none w-full max-w-3xl h-full min-h-fit flex flex-col justify-center items-center bg-gradient-to-bl from-rose-100 to-teal-100">
         {status === 'not-started' && (
           <div className="w-72 h-32 grid grid-cols-2 justify-center items-center gap-5">

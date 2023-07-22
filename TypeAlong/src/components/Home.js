@@ -1,7 +1,7 @@
 function Home() {
     return (
         <div className="w-full flex flex-col space-y-5 justify-center items-center p-20 bg-amber-300 h-screen">
-            <h1 class="font-extrabold text-3xl w-full max-w-3xl text-center bg-amber-300 p-5 -mb-4 rounded-lg rounded-b-none text-white drop-shadow-xl">{"--- Test Type ---"}</h1>
+            <h1 class="font-extrabold text-3xl w-full max-w-3xl text-center bg-amber-300 p-5 -mb-4 rounded-lg rounded-b-none text-white drop-shadow-xl">{"--- Type Swift ---"}</h1>
             <div className="drop-shadow-xl rounded-lg rounded-t-none w-full max-w-3xl h-full flex flex-col space-y-5 justify-center items-center bg-gradient-to-bl from-rose-100 to-teal-100">
                 <div className="font-extrabold italic text-xl">--- PRACTICE (SOLO) ---</div>
                 <div className="flex items-center justify-center space-x-5">
