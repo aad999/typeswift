@@ -11,12 +11,12 @@ const { get_couples, get_words, get_quotes } = require('./services');
 // listen for requests
 
 app.get('/get_couples', async (req, res) => {
-    const response = await get_couples(20);
+    const response = await get_couples(100);
     res.send(response);
 })
 
 app.get('/get_words', async (req, res) => {
-    const response = await get_words(20);
+    const response = await get_words(100);
     res.send(response);
 })
 
